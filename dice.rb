@@ -6,13 +6,17 @@ class Dice
 
 
 
-	def initialize numberOfSides
-		@num_sides = numberOfSides
+	def initialize num_sides
+		@num_sides = num_sides
 		@prev_rolls = []
 	end
 
 	def prev_rolls
 		@prev_rolls
+	end
+
+	def num_sides
+		@num_sides
 	end
 	
 	def roll 
@@ -28,8 +32,10 @@ end
 
 gamble = Dice.new 6
 
-gamble.roll
-gamble.roll
-gamble.roll
+rand(1..gamble.num_sides).times do 
+	gamble.roll
+	
+end
+
 
 p gamble.get_rolls
