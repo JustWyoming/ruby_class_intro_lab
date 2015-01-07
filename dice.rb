@@ -17,7 +17,7 @@ class Dice
 	
 	def roll 
 		current_roll = rand(1..@num_sides)
-		@prev_rolls.push(current_roll)
+		@prev_rolls << current_roll
 	end
 
 	def get_rolls
